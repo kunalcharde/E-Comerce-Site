@@ -1,30 +1,17 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import Product from '../Product/Product'
 import Navbar from '../Navbar/Navbar'
+import Cart from '../Cart/Cart'
 const Home = () => {
-    const [data,setData] = useState([])
-    useEffect(() =>{
-        const getData = async()=>{
-            const url= "https://dummyjson.com/products"
-            const fetchData= await fetch(url)
-            const data = await fetchData.json();
-            // console.log(data)
-            setData(data)
-            console.log(data)
-        }
-        getData();  
-    },[])
+   
   return (
     <>
     <Navbar/>
     <div>
-        {
-            data?.products?.map(product => <h1>{product.title}</h1>)
-        }
+        <Product/>
     </div>
     </>
 
-    
   )
 }
 
