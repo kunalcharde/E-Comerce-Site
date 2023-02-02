@@ -1,19 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-const CheckOut = () => {
+const CheckOut = ({getData}) => {
+  const [data,setData]=useState(getData)
+   console.log("checkOut",data)
     const handleCheckOut=()=>{
-        console.log("checkout")
+      setData([])
     }
   return (
     <div className="checkout-container right">
           <h2 >Checkout</h2>
-          <div className="checkout-product-line"><span>1</span><span>iPhone X</span><span>$ 899</span></div>
-          <div className="checkout-product-line"><span>2</span><span>OPPOF19</span><span> $ 280</span></div>
-          <div className="checkout-product-line"><span>3</span><span>Samsung Galaxy</span><span>$ 1499</span></div>
+          {
+            data?.map((products,idx)=>{
+              return <div className="checkout-product-line"><span>{idx+1}</span><span>{products?.title}</span><span>$ {products?.price}</span></div>
+            })
+          }
+         
+         
           <hr/>
           <div  className="checkout-product-line"><span></span><span>Total :</span> <span>$ 2678</span></div>
           <hr/>
-          <button onclick={()=> handleCheckOut}>Checkout</button>
+          <button onClick={()=> {handleCheckOut()}}>Checkout</button>
         </div>
   )
 }

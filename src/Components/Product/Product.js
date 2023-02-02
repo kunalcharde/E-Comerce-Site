@@ -23,9 +23,10 @@ const Product = () => {
     
   }, []);
   const filterData =(categ)=>{
-    const updatedProduct =data?.products?.filter((product)=> product.category===categ);
+    console.log(categ);
+    const updatedProduct = data?.products?.filter((product)=> product?.category===categ);
+    console.log(updatedProduct)
     setFilter(updatedProduct);
-    
   }
   const ShowProducts = () => {
     return (

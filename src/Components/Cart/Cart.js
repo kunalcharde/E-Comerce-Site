@@ -43,7 +43,7 @@ const Cart = () => {
           
         })}
         </div>
-        <CheckOut/>
+         {getData.length?<CheckOut getData={getData}/>:<h2>NO ITEMS ADDED</h2>}
       </div>
     </div>
   );
