@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import CheckOut from "./CheckOut";
 import Qty from "./Qty";
 import { useSelector } from "react-redux";
-import { delItem } from "../../Actions/action";
+import { } from "../../Actions/action";
 import { useDispatch } from "react-redux";
 import "./Cart.css";
 const Cart = () => {

@@ -18,6 +18,9 @@ let cart=[]
             else if(action.type==="DELITEM"){
                 return state.filter((item)=> item.id !== action.payload.id);
             }
+            else if(action.type==="REMOVEITEM"){
+                return []
+            }
             else{
                 return state;
             }

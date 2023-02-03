@@ -10,3 +10,9 @@ export const delItem=(product)=>{
         payload : product
     }
 }
+export const removeallItem=(product)=>{
+    return {
+        type : "REMOVEITEM",
+        payload : product
+    }
+}
