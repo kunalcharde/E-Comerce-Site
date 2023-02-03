@@ -5,7 +5,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div className="navbar">
-       <div className="navbar-logo">
+       <div className="navbar-logo" onClick={() =>{
+              navigate("/")}}>
         E-Com
        </div>
        <div className="navbar-list">

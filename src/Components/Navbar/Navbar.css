@@ -21,4 +21,8 @@ li{
     font-size: 1.5rem;
     font-weight: 600;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
 }

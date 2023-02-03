@@ -32,7 +32,7 @@ const Cart = () => {
               <div className="Product-quantity">
                 <Qty/>
               </div>
-              <button className="Product-add" onClick={()=>RemoveProduct(product)}>Remove Cart</button>
+              <button className="Product-add" onClick={()=>RemoveProduct(product)}>Remove Product</button>
             </div>
             
           </>

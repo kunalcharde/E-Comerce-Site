@@ -10,7 +10,7 @@ const CheckOut = ({getData}) => {
           <h2 >Checkout</h2>
           {
             data?.map((products,idx)=>{
-              return <div className="checkout-product-line"><span>{idx+1}</span><span>{products?.title}</span><span>$ {products?.price }</span></div>
+              return <div className="checkout-product-line"><span>{idx+1}</span><span>{products?.title.toUpperCase()}</span><span>$ {products?.price }</span></div>
             })
           }
          
