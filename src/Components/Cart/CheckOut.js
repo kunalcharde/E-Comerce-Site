@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 
 const CheckOut = ({getData}) => {
   const [data,setData]=useState(getData)
-   console.log("checkOut",data)
     const handleCheckOut=()=>{
       setData([])
     }
@@ -11,13 +10,13 @@ const CheckOut = ({getData}) => {
           <h2 >Checkout</h2>
           {
             data?.map((products,idx)=>{
-              return <div className="checkout-product-line"><span>{idx+1}</span><span>{products?.title}</span><span>$ {products?.price}</span></div>
+              return <div className="checkout-product-line"><span>{idx+1}</span><span>{products?.title}</span><span>$ {products?.price }</span></div>
             })
           }
          
          
           <hr/>
-          <div  className="checkout-product-line"><span></span><span>Total :</span> <span>$ 2678</span></div>
+          <div  className="checkout-product-line"><span></span><span>Total :</span> <span>$ </span></div>
           <hr/>
           <button onClick={()=> {handleCheckOut()}}>Checkout</button>
         </div>

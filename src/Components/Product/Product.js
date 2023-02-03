@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addcart } from "../../Actions/action";
+import Qty from "../Cart/Qty";
 
 import './Product.css'
 const Product = () => {
@@ -44,9 +45,7 @@ const Product = () => {
               <div className="Product-rating">Rating: {product?.rating}</div>
               <div className="Product-Price">Price : $ {product?.price}</div>
               <div className="Product-quantity">
-                <button>-</button>
-                <input value={0}/>
-                <button>+</button>
+                <Qty/>
               </div>
               <button className="Product-add" onClick={()=>addProduct(product)}>Add To Cart</button>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import CheckOut from "./CheckOut";
+import Qty from "./Qty";
 import { useSelector } from "react-redux";
 import { delItem } from "../../Actions/action";
 import { useDispatch } from "react-redux";
@@ -9,7 +10,6 @@ const Cart = () => {
   let getData = useSelector((state) => state);
   console.log("cart", getData);
   const dispatch = useDispatch();
-
   const RemoveProduct = (product) => {
     dispatch(delItem(product));
   };
@@ -30,9 +30,7 @@ const Cart = () => {
               <div className="Product-rating">Rating: {product?.rating}</div>
               <div className="Product-Price">Price : $ {product?.price}</div>
               <div className="Product-quantity">
-                <button>-</button>
-                <input value={0}/>
-                <button>+</button>
+                <Qty/>
               </div>
               <button className="Product-add" onClick={()=>RemoveProduct(product)}>Remove Cart</button>
             </div>

@@ -17,9 +17,8 @@ li{
     font-weight: 500;
 }
 .navbar-logo{
-    text-align: center;
-}
-Link{
-    text-decoration: none;
-    list-style: none;
+    color: rgb(255, 121, 103);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
